@@ -20,3 +20,8 @@ while True:
     #    return True            # isdigit проверяет только цифры,
     #else:                      # а не числа. на отрицательных или
     #    return False           # не целых числах выдает False
+
+    #if x.isalnum() == True:    # Не подходит
+    #    return True
+    #else:
+    #    return False
