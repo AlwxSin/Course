@@ -16,4 +16,17 @@ def generator(number_count):
     #finish = time.clock()
     #print(finish-start)
     return phone_book
-        
+
+
+# Writing in a file
+phone_book = generator(100000)                              # Our phone book
+file = open('phone book.txt', 'w')                          # Making a new file
+for key in phone_book:
+    file.write(key + ' - ' + str(phone_book[key]) + '\n')   # Writing phone book in a file
+file.close()
+
+#test
+#file = open('phone book.txt')
+#listing = [line.strip() for line in file]
+#print(listing)
+#file.close()
