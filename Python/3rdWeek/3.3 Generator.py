@@ -12,7 +12,7 @@ def generator(number_count):
         phone_numbers.add(randint(100000, 10000000)) # Random unique 7-digit numbers
         name_list.add(str(choice(ascii_uppercase)) + str(''.join((choice(ascii_lowercase) for i in range(randint(4, 10)))))) # Random unique name, 4<len(name)<10
     for i in range(number_count):
-        phone_book[name_list.pop()] = phone_numbers.pop() # Making a dict Name: Number
+        phone_book[phone_numbers.pop()] = name_list.pop() # Making a dict Number: Name
     #finish = time.clock()
     #print(finish-start)
     return phone_book
@@ -22,7 +22,7 @@ def generator(number_count):
 phone_book = generator(100000)                              # Our phone book
 file = open('phone_book.txt', 'w')                          # Making a new file
 for key in phone_book:
-    file.write(key + '-' + str(phone_book[key]) + '\n')   # Writing phone book in a file
+    file.write(str(key) + '-' + phone_book[key] + '\n')   # Writing phone book in a file
 file.close()
 
 #test
