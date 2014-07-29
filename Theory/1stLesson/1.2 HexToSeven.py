@@ -16,6 +16,7 @@ def to_seven(x):
     return result[::-1]
 
 def hex_to_dec(x):
+    """Returns a decimal representation of hex number"""
     result = 0
     grade = len(x)-1
     for i in x:
@@ -27,8 +28,8 @@ def hex_to_dec(x):
     return str(result)
 
 def hex_to_seven(x):
-    x = hex_to_dec(x)
-    x = to_seven(x)
+    x = hex_to_dec(x)   # First i need to see decimal
+    x = to_seven(x)     # Now from decimal i can convert to seven
     return x
 
 print(hex_to_seven('5'))
