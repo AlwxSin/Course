@@ -2,10 +2,8 @@ def power_of_two(x):
     """Является ли число степенью двойки"""
     if x == 1: return True
     two = 2 << len(bin(x))-4
-    if x == two:
-        return True
-    else:
-        return False
+    return x == two
+    
 
 
 print(power_of_two(1))
