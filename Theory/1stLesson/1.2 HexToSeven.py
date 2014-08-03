@@ -23,8 +23,8 @@ def hex_to_dec(x):
         if chr_to_num(i) > 15:
             return print('Not a hex')
         else:
-            result += chr_to_num(i)*(16**grade)
-            grade -= 1
+            result *= 16
+            result += chr_to_num(i)
     return str(result)
 
 def hex_to_seven(x):

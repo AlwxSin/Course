@@ -13,3 +13,5 @@ def sieve(n):
             numbers.remove(i)
         count +=1        
     return numbers
+
+print(sieve(1000))

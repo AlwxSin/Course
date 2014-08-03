@@ -6,13 +6,15 @@
 
 def OctToDec(x):
     """Returns a decimal representation of a oct number"""
-    grade = len(x)-1
+    #grade = len(x)-1
     result = 0
     for i in x:
         if int(i) > 7:
             return print('String must be in Octo')
-        result += int(i)*(8**grade)
-        grade -= 1
+        result *= 8
+        result += int(i)
+        #result += int(i)*(8**grade)
+        #grade -= 1
     return result
 
 print(OctToDec('5'))
