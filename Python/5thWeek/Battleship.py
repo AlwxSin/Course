@@ -74,6 +74,6 @@ class Human(Player):
             coordinates = input('> ')
             while Battlefield.check(coordinates) != False:
                 x, y = Battlefield.check(coordinates)
-                self.field[x][y]=1
+                self.field[x][y]='1'
                 self.ships -= 1
                 Battlefield.show(self.field)
