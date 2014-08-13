@@ -125,7 +125,7 @@ e.fill()
 print("Let's start\n")
 print('If you want to random fill your battlefield, type "random". If you want to fill manually, type "myself"')
 while True:
-    line = input('')
+    line = input('> ')
     if line == 'random': # If player don't want to fill manually
         p.fill()
         break
