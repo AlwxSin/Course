@@ -54,7 +54,6 @@ class Player:
                 self.field[x][y] = '1'
                 count -= 1
             else: continue
-        Battlefield.show(self.field)
     def attack(self):
         '''Function returns False if player missed and True in all other situations'''
         coord = self.my_coord.pop()                                 # Takes random coordinate from set of all coordinates
