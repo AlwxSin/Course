@@ -13,7 +13,7 @@ class Battlefield:
         for x in range(0,5):                                        # At first just zeros
             field.append(['0' for i in range(5)])
         field.insert(0,[i for i in range(6)])                       # Number coordinates
-        for char in range(ord('a'),ord('a')):                       # Character coordinates
+        for char in range(ord('a'),ord('f')):                       # Character coordinates
             field[char-ord('a')+1].insert(0, chr(char))
         field[0][0]=' '
         return(field)
@@ -55,7 +55,8 @@ class Player:
                 count -= 1
             else: continue
         Battlefield.show(self.field)
-    def attack(self):                                               # Function returns False if player missed and True in all other situations
+    def attack(self):
+        '''Function returns False if player missed and True in all other situations'''
         coord = self.my_coord.pop()                                 # Takes random coordinate from set of all coordinates
         x, y = Battlefield.check(coord)
         if self.enemy_field[x][y] == '0' and p.field[x][y] == '0':  # Miss
@@ -87,7 +88,8 @@ class Human(Player):
     def __init__(self):
         Player.__init__(self)
         self.name = 'You'
-    def fill_byhands(self):                                         # Fill battlefield manualy
+    def fill_byhands(self):
+        '''Fill battlefield manualy'''
         print('Place your ships','\nEnter the coordinates of your ships one by one, like d4,G7 etc.')
         print('You have %s ships remain' %self.ships)
         count = self.ships
