@@ -28,7 +28,6 @@ def get_article(page_str):
 
 def get_title(page_str):
     title = re.search('(?<=<title>).*?(?=</title>)', page_str, re.DOTALL)
-    print(title)
     title = title.group()
     return title
 
@@ -57,7 +56,7 @@ def format_title(string):
         string += ".html"
     return re.sub(r"[*|\:\"<>?/]", " ", string)
 
-#url_list = []
+url_list = []
 
 print("Введите одну или несколько (разделение по клавише Enter) \
 ссылок на статьи с сайта lenta.ru\nВведите 'start' чтобы преобразовать")
